@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1914 Official Site | 1914STUDIO</title>
+    <link rel="icon" href="tb.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 全屏滚动基础样式 */
+        html, body {
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 60px 20px 0;
+            box-sizing: border-box;
+        }
+        .section-content {
+            max-width: 1200px;
+            width: 100%;
+            z-index: 1;
+        }
+        .section-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+            filter: brightness(0.4);
+        }
+        /* 导航栏固定定位 */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        /* 页脚样式调整 */
+        .footer {
+            margin-top: 0;
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav">
+            <a href="/index.html" class="logo">1914STUDIO</a>
+            <button class="mobile-menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="/index.html" class="active" data-i18n="home">首页</a>
+                <a href="/user/index.html" data-i18n="team">团队介绍</a>
+                <a href="/product/index.html" data-i18n="contact">产品</a>
+                <a href="/weekly.html" data-i18n="weekly">周刊</a>
+                <a href="https://flowus.cn/share/a7a131b8-0e88-461b-a08a-4a8c8e974e67?code=8CTZ98" data-i18n="word" target="_blank">官方信息</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首页全屏章节 -->
+    <section id="home" class="section" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));">
+        <div class="section-bg" style="background-image: url('tp/cp.jpg');"></div>
+        <div class="section-content">
+            <div style="text-align: center;">
+                <h1 class="main-title" data-i18n="welcome">1914工作室</h1>
+                <div class="ascii-art" id="asciiContainer"></div>
+                <a href="#products" class="btn" data-i18n="view_more">了解产品</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品中心全屏章节 -->
+    <section id="products" class="section" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9));">
+        <div class="section-bg" style="background-image: url('tp/fp.jpg');"></div>
+        <div class="section-content">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: var(--accent-color);">我们的产品</h2>
+            <div class="content">
+                <div class="card">
+                    <div class="card-icon">🎮</div>
+                    <h3 data-i18n="product1_title">TGW一战卡牌</h3>
+                    <p data-i18n="product1_desc">一款以第一次世界大战为背景的策略卡牌游戏，融合历史元素与创新玩法，带来沉浸式战争体验。</p>
+                    <a href="product/index.html" class="card-btn" data-i18n="product_detail">了解详情</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3 data-i18n="product2_title">TGW制卡器</h3>
+                    <p data-i18n="product2_desc">强大而易用的卡牌制作工具，让玩家能够自定义卡牌外观和属性，释放创意，打造专属游戏体验。</p>
+                    <a href="product/index.html" class="card-btn" data-i18n="try_now">立即尝试</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h3 data-i18n="product3_title">TGWM</h3>
+                    <p data-i18n="product3_desc">迷你版TGW，无需下载，即可在浏览器中游玩。支持多人对战管理、卡牌收藏管理和自定义规则等功能。</p>
+                    <a href="product/index.html" class="card-btn" data-i18n="explore_features">探索功能</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们全屏章节 -->
+    <section id="about" class="section" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9));">
+        <div class="section-bg" style="background-image: url('tp/abt.jpg');"></div>
+        <div class="section-content">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: var(--accent-color);">关于我们</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 15px;">
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">我们只是一个小小的团队</p>
+                <div class="footer-social" style="margin-top: 30px;">
+                    <a href="https://space.bilibili.com/524707454?spm_id_from=333.337.search-card.all.click">📱bilibili</a>
+                    <a href="https://pd.qq.com/s/gpiwnyopd">🐦qq频道</a>
+                    <a href="https://tieba.baidu.com/f?ie=utf-8&kw=tgw%E6%AD%A2%E6%88%98%E4%B9%8B%E6%88%98">📸官方贴吧</a>
+                    <a href="https://qm.qq.com/q/YHbj0SBIgS">🔗qq群</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3 data-i18n="about_us">关于我们</h3>
+                <p>1914STUDIO</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3 data-i18n="contact">联系方式</h3>
+                <p>邮箱：Ayden@tgw1914.top</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3 data-i18n="follow_us">关注我们</h3>
+                <div class="footer-social">
+                    <a href="https://space.bilibili.com/524707454?spm_id_from=333.337.search-card.all.click">📱bilibili</a>
+                    <a href="https://pd.qq.com/s/gpiwnyopd">🐦qq频道</a>
+                    <a href="https://tieba.baidu.com/f?ie=utf-8&kw=tgw%E6%AD%A2%E6%88%98%E4%B9%8B%E6%88%98">📸官方贴吧</a>
+                    <a href="https://qm.qq.com/q/YHbj0SBIgS">🔗qq群</a>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    
+<script src="script.js"></script>
+</body>
+</html>
